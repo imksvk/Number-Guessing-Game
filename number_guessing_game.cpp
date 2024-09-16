@@ -6,7 +6,7 @@ class Guesser{
     int guessed_num;
     public:
         int takeguesserinput(){
-            cout<<"Give the number for the guesser"<<endl;
+            cout<<"Give the number for the guesser ---> ";
             int x;
             cin>>x;
             guessed_num = x;
@@ -20,7 +20,7 @@ class Player{
     public:
         int takeplayerinput( int x){
             int p;
-            cout<<"Give the number guessed by the player "<<x<<" :"<<endl;
+            cout<<"Give the number guessed by the player "<<x<<" ---> "<<endl;
             cin>>p;
             playernum = p;
             return playernum;
@@ -74,8 +74,8 @@ class Umpire{
 
 int main(){
     
-    cout<<"Welcome to Number Guessing Game"<<endl;
-    cout<<"Let's Start the Game "<<endl;
+    cout<<"<----- Welcome to Number Guessing Game ----->"<<endl;
+    cout<<"       <--- Let's Start the Game --->        "<<endl;
 
      
     Umpire u;
