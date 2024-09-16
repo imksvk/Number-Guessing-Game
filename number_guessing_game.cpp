@@ -14,40 +14,47 @@ class Guesser{
         }
 };
 
-class Umpire{
-
-    int g;
-    int p1, p2 , p3;
-
-    public:
-        void get_the_number_from_guesser(){
-            Guesser g1;
-            g = g1.takeguesserinput();
-        }
-        int get_the_number_from_player(){
-
-        }
-
-        int print_the_result(){
-
-        }
-        
-
-};
-
 class Player{
     
     int playernum;
     public:
-        int takeplayerinput(){
+        int takeplayerinput( int x){
             int p;
-            cout<<"Give the number guessed by the player :"<<endl;
+            cout<<"Give the number guessed by the player "<<x<<" :"<<endl;
             cin>>p;
             playernum = p;
             return playernum;
         }
 
 };
+
+class Umpire{
+
+    public:
+    int g;
+    int p1num, p2num , p3num;
+
+        void get_the_number_from_guesser(){
+            Guesser g1;
+            g = g1.takeguesserinput();
+            // cout<<"Number guessed by guesser "<<g<<endl;
+        }
+
+        void get_the_number_from_player(){
+            Player p1, p2, p3;
+            p1num = p1.takeplayerinput(1);
+            p2num = p2.takeplayerinput(2);
+            p3num = p3.takeplayerinput(3);
+        }
+
+        void print_the_result(){
+
+        }
+        
+
+};
+
+
 
 
 int main(){
@@ -56,7 +63,9 @@ int main(){
     cout<<"Let's Start the Game "<<endl;
 
      
-
+    Umpire u;
+    u.get_the_number_from_guesser();
+    u.get_the_number_from_player();
 
 
      
@@ -64,6 +73,6 @@ int main(){
 
 
 
-    cout<<"Let's End the Game"<<endl;
+    cout<<"<----------- End Game ----------->"<<endl;
     return 0;
 }
