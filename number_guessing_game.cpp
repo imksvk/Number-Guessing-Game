@@ -16,6 +16,23 @@ class Guesser{
 
 class Umpire{
 
+    int g;
+    int p1, p2 , p3;
+
+    public:
+        void get_the_number_from_guesser(){
+            Guesser g1;
+            g = g1.takeguesserinput();
+        }
+        int get_the_number_from_player(){
+
+        }
+
+        int print_the_result(){
+
+        }
+        
+
 };
 
 class Player{
