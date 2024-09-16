@@ -20,14 +20,25 @@ class Umpire{
 
 class Player{
     
+    int playernum;
+    public:
+        int takeplayerinput(){
+            int p;
+            cout<<"Give the number guessed by the player :"<<endl;
+            cin>>p;
+            playernum = p;
+            return playernum;
+        }
 
 };
+
 
 int main(){
     
     cout<<"Welcome to Number Guessing Game"<<endl;
     cout<<"Let's Start the Game "<<endl;
 
+     
 
 
 
