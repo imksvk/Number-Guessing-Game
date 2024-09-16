@@ -48,7 +48,22 @@ class Umpire{
         }
 
         void print_the_result(){
-
+            // 
+            if(p1num == g and p2num == g and p3num == g){
+                cout<<"Player 1 , Player 2, Player 3 won the game"<<endl;
+            }
+             if(p1num == g){
+                cout<<"Player 1 Won the Game "<<endl;
+            }
+             if(p2num == g){
+                cout<<"Player 2 Won the game"<<endl;
+            }
+            if(p3num == g){
+                cout<<"Player 3 Won the game"<<endl;
+            }
+            if(p1num != g and p2num != g and p3num != g){
+                cout<<"All Players lost the Game"<<endl;
+            }
         }
         
 
@@ -66,7 +81,7 @@ int main(){
     Umpire u;
     u.get_the_number_from_guesser();
     u.get_the_number_from_player();
-
+    u.print_the_result();
 
      
 
